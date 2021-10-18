@@ -10,9 +10,12 @@ public class Profesores extends Datos{
 
     public void determinado(){
         System.out.println("Ingrese departamento al que pertenece");
-        this.dptoDeterminado = read.nextLine();
+        this.dptoDeterminado = read.next();
     }
-
+    public void ingresarNombre() {
+        System.out.println("Ingrese su nombre");
+        this.nombre = read.next();
+    }
 
 
 }

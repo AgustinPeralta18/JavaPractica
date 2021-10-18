@@ -10,9 +10,12 @@ public class Personal extends Datos {
 
     public void ingreseSeccion(){
         System.out.println("Ingrese seccion al cual pertenece");
-        this.seccion = read.nextLine();
+        this.seccion = read.next();
     }
 
-
+    public void ingresarNombre() {
+        System.out.println("Ingrese su nombre");
+        this.nombre = read.next();
+    }
 
 }

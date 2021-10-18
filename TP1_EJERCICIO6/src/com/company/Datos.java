@@ -17,24 +17,19 @@ public abstract class Datos  {
         this.read = new Scanner(System.in);
     }
 
-    public void ingresarNombre(){
-        System.out.println("Ingrese su nombre");
-        this.apellido = read.nextLine();
-
-    }
+    public abstract void ingresarNombre();
 
     public void ingresarApellido(){
         System.out.println("Ingrese su apellido");
-        this.apellido = read.nextLine();
+        this.apellido = read.next();
     }
     public void ingresarEstadoCivil(){
         System.out.println("Ingresar su estado civil");
-        this.estadoCivil = read.nextLine();
+        this.estadoCivil = read.next();
     }
     public void ingresarDni(){
         System.out.println("Ingresar su dni");
         this.dni = read.nextInt();
-        read.nextLine();
     }
 
 
