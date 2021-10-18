@@ -3,6 +3,7 @@ package com.company;
 public class Estudiante extends Datos {
     private int anioIncorporacion;
     private int numDespacho;
+    private int curso;
 
 
     public Estudiante(String nombre, String apellido, String estadoCivil, int dni, int anioIncorporacion, int numDespacho) {
@@ -21,9 +22,11 @@ public class Estudiante extends Datos {
         this.numDespacho = read.nextInt();
     }
 
-    @Override
-    public void ingresarNombre() {
-        System.out.println("Ingrese su nombre");
-        this.nombre = read.next();
+    public void ingresoCurso(){
+        System.out.println("Ingrese su curso");
+        this.curso = read.nextInt();
     }
+
+
+
 }
