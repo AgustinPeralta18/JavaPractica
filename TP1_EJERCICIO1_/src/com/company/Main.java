@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Estudiantes myEstudiante = new Estudiantes("a","b","c",3,5,6,7);
-        ArrayList<Estudiantes> myStudents = new ArrayList<>();
+        Universidad facultad = new Universidad();
+        ArrayList<Universidad> registro = new ArrayList<>();
         Scanner read = new Scanner(System.in);
         int opcion;
         int remover;
@@ -18,38 +18,56 @@ public class Main {
             System.out.println("Alumno[1]");
             System.out.println("Profesor[2]");
             System.out.println("Personal[3]");
+            System.out.println("Mostrar Registros[4]");
             opcion = read.nextInt();
             switch (opcion){
                 case 1:
                     System.out.println("Agregar Alumno[1]");
                     System.out.println("Eliminar Alumno[2]");
-                    System.out.println("Mostrar Alumnos[3]");
                     opcion = read.nextInt();
                     if (opcion == 1){
-                        myEstudiante.ingresarDatos();
-                        myStudents.add(new Estudiantes());
+                        facultad.Alumnos();
+                        registro.add(new Universidad());
                     }
                     if (opcion == 2){
                         System.out.println("Indicar posicion para eliminar");
-                        myStudents.remove(myEstudiante);
+                        registro.remove(new Universidad());
 
                     }
-                    if (opcion == 3){
-                        for (Estudiantes mostrar : myStudents)
-                        {
-                            System.out.println(mostrar.nombre);
-                            System.out.println(mostrar.apellido);
-                            System.out.println(mostrar.dni);
-                            System.out.println(mostrar.estadoCivil);
-                            System.out.println(mostrar.getAnioIncorporacion());
-                            System.out.println(mostrar.getCurso());
-                            System.out.println(mostrar.getNumDespacho());
-                        }
-                    }
+
                     break;
                 case 2:
+                    System.out.println("Agregar Profesores[1]");
+                    System.out.println("Eliminar Profesores[2]");
+                    opcion = read.nextInt();
+                    if (opcion == 1){
+                        facultad.Profesores();
+                        registro.add(new Universidad());
+                    }
+                    if (opcion == 2){
+                        System.out.println("Indicar posicion para eliminar");
+                        registro.remove(new Universidad());
 
+                    }
                     break;
+                case 3:
+                    System.out.println("Agregar Empleados[1]");
+                    System.out.println("Eliminar Empleados[2]");
+                    opcion = read.nextInt();
+                    if (opcion == 1){
+                        facultad.Empleados();
+                        registro.add(new Universidad());
+                    }
+                    if (opcion == 2){
+                        System.out.println("Indicar posicion para eliminar");
+                        registro.remove(new Universidad());
+                    }
+                case 4:
+                    for (Universidad mostrar : registro) {
+                        mostrar.Alumnos();
+                        mostrar.Profesores();
+                        mostrar.Empleados();
+                    }
                 default:
                     break;
             }
